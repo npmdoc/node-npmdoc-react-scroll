@@ -1,0 +1,1361 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/fisshy/react-scroll"
+
+    >react-scroll (v1.5.2)</a>
+</h1>
+<h4>A scroll component for React.js</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-scroll">module react-scroll</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.Button">
+            function <span class="apidocSignatureSpan">react-scroll.</span>Button
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.Element">
+            function <span class="apidocSignatureSpan">react-scroll.</span>Element
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.Link">
+            function <span class="apidocSignatureSpan">react-scroll.</span>Link
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scroll.</span>Events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scroll.</span>Helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scroll.</span>animateScroll</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scroll.</span>scrollSpy</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scroll.</span>scroller</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-scroll.Helpers">module react-scroll.Helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.Helpers.Element">
+            function <span class="apidocSignatureSpan">react-scroll.Helpers.</span>Element
+            <span class="apidocSignatureSpan">(Component)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.Helpers.Scroll">
+            function <span class="apidocSignatureSpan">react-scroll.Helpers.</span>Scroll
+            <span class="apidocSignatureSpan">(Component, customScroller)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-scroll.animateScroll">module react-scroll.animateScroll</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.animateScroll.animateTopScroll">
+            function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>animateTopScroll
+            <span class="apidocSignatureSpan">(y, options, to, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.animateScroll.getAnimationType">
+            function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>getAnimationType
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.animateScroll.scrollMore">
+            function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>scrollMore
+            <span class="apidocSignatureSpan">(toY, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.animateScroll.scrollTo">
+            function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>scrollTo
+            <span class="apidocSignatureSpan">(toY, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.animateScroll.scrollToBottom">
+            function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>scrollToBottom
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.animateScroll.scrollToTop">
+            function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>scrollToTop
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-scroll.scrollSpy">module react-scroll.scrollSpy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scrollSpy.addSpyHandler">
+            function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>addSpyHandler
+            <span class="apidocSignatureSpan">(handler, scrollSpyContainer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scrollSpy.addStateHandler">
+            function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>addStateHandler
+            <span class="apidocSignatureSpan">(handler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scrollSpy.currentPositionY">
+            function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>currentPositionY
+            <span class="apidocSignatureSpan">(scrollSpyContainer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scrollSpy.isMounted">
+            function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>isMounted
+            <span class="apidocSignatureSpan">(scrollSpyContainer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scrollSpy.mount">
+            function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>mount
+            <span class="apidocSignatureSpan">(scrollSpyContainer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scrollSpy.scrollHandler">
+            function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>scrollHandler
+            <span class="apidocSignatureSpan">(scrollSpyContainer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scrollSpy.unmount">
+            function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>unmount
+            <span class="apidocSignatureSpan">(stateHandler, spyHandler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scrollSpy.update">
+            function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scrollSpy.updateStates">
+            function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>updateStates
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>scrollSpyContainers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>spyCallbacks</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>spySetState</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-scroll.scroller">module react-scroll.scroller</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scroller.get">
+            function <span class="apidocSignatureSpan">react-scroll.scroller.</span>get
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scroller.getActiveLink">
+            function <span class="apidocSignatureSpan">react-scroll.scroller.</span>getActiveLink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scroller.register">
+            function <span class="apidocSignatureSpan">react-scroll.scroller.</span>register
+            <span class="apidocSignatureSpan">(name, element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scroller.scrollTo">
+            function <span class="apidocSignatureSpan">react-scroll.scroller.</span>scrollTo
+            <span class="apidocSignatureSpan">(to, props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scroller.setActiveLink">
+            function <span class="apidocSignatureSpan">react-scroll.scroller.</span>setActiveLink
+            <span class="apidocSignatureSpan">(link)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scroller.unmount">
+            function <span class="apidocSignatureSpan">react-scroll.scroller.</span>unmount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scroll.scroller.unregister">
+            function <span class="apidocSignatureSpan">react-scroll.scroller.</span>unregister
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-scroll" id="apidoc.module.react-scroll">module react-scroll</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.Button" id="apidoc.element.react-scroll.Button">
+        function <span class="apidocSignatureSpan">react-scroll.</span>Button
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _(props) {
+  _classCallCheck(this, _);
+
+  var _this = _possibleConstructorReturn(this, (_.__proto__ || Object.getPrototypeOf(_)).call(this, props));
+
+  _this.scrollTo = _this.scrollTo.bind(_this);
+  _this.handleClick = _this.handleClick.bind(_this);
+  _this.spyHandler = _this.spyHandler.bind(_this);
+
+  return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.Element" id="apidoc.element.react-scroll.Element">
+        function <span class="apidocSignatureSpan">react-scroll.</span>Element
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _(props) {
+  _classCallCheck(this, _);
+
+  var _this2 = _possibleConstructorReturn(this, (_.__proto__ || Object.getPrototypeOf(_)).call(this, props));
+
+  _this2.registerElems = _this2.registerElems.bind(_this2);
+  return _this2;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    &#x3c;div {...this.props}&#x3e;
+      {this.props.children}
+    &#x3c;/div&#x3e;
+  );
+}
+});
+
+module.exports = Helpers.<span class="apidocCodeKeywordSpan">Element</span>(Element);
+
+var Link = React.createClass({
+render: function () {
+  return (
+    &#x3c;a {...this.props}&#x3e;
+      {this.props.children}
+    &#x3c;/a&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.Link" id="apidoc.element.react-scroll.Link">
+        function <span class="apidocSignatureSpan">react-scroll.</span>Link
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _(props) {
+  _classCallCheck(this, _);
+
+  var _this = _possibleConstructorReturn(this, (_.__proto__ || Object.getPrototypeOf(_)).call(this, props));
+
+  _this.scrollTo = _this.scrollTo.bind(_this);
+  _this.handleClick = _this.handleClick.bind(_this);
+  _this.spyHandler = _this.spyHandler.bind(_this);
+
+  return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-scroll.Helpers" id="apidoc.module.react-scroll.Helpers">module react-scroll.Helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.Helpers.Element" id="apidoc.element.react-scroll.Helpers.Element">
+        function <span class="apidocSignatureSpan">react-scroll.Helpers.</span>Element
+        <span class="apidocSignatureSpan">(Component)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Element(Component) {
+  var _ = function (_React$Component2) {
+    _inherits(_, _React$Component2);
+
+    function _(props) {
+      _classCallCheck(this, _);
+
+      var _this2 = _possibleConstructorReturn(this, (_.__proto__ || Object.getPrototypeOf(_)).call(this, props));
+
+      _this2.registerElems = _this2.registerElems.bind(_this2);
+      return _this2;
+    }
+
+    _createClass(_, [{
+      key: &#x27;componentDidMount&#x27;,
+      value: function componentDidMount() {
+        this.registerElems(this.props.name);
+      }
+    }, {
+      key: &#x27;componentWillReceiveProps&#x27;,
+      value: function componentWillReceiveProps(nextProps) {
+        if (this.props.name !== nextProps.name) {
+          this.registerElems(nextProps.name);
+        }
+      }
+    }, {
+      key: &#x27;componentWillUnmount&#x27;,
+      value: function componentWillUnmount() {
+        defaultScroller.unregister(this.props.name);
+      }
+    }, {
+      key: &#x27;registerElems&#x27;,
+      value: function registerElems(name) {
+        var domNode = ReactDOM.findDOMNode(this);
+        defaultScroller.register(name, domNode);
+      }
+    }, {
+      key: &#x27;render&#x27;,
+      value: function render() {
+        return React.createElement(Component, this.props);
+      }
+    }]);
+
+    return _;
+  }(React.Component);
+
+  ;
+  _.propTypes = {
+    name: PropTypes.string,
+    id: PropTypes.string
+  };
+  return _;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    &#x3c;div {...this.props}&#x3e;
+      {this.props.children}
+    &#x3c;/div&#x3e;
+  );
+}
+});
+
+module.exports = Helpers.<span class="apidocCodeKeywordSpan">Element</span>(Element);
+
+var Link = React.createClass({
+render: function () {
+  return (
+    &#x3c;a {...this.props}&#x3e;
+      {this.props.children}
+    &#x3c;/a&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.Helpers.Scroll" id="apidoc.element.react-scroll.Helpers.Scroll">
+        function <span class="apidocSignatureSpan">react-scroll.Helpers.</span>Scroll
+        <span class="apidocSignatureSpan">(Component, customScroller)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Scroll(Component, customScroller) {
+
+  var scroller = customScroller || defaultScroller;
+
+  var _ = function (_React$Component) {
+    _inherits(_, _React$Component);
+
+    function _(props) {
+      _classCallCheck(this, _);
+
+      var _this = _possibleConstructorReturn(this, (_.__proto__ || Object.getPrototypeOf(_)).call(this, props));
+
+      _this.scrollTo = _this.scrollTo.bind(_this);
+      _this.handleClick = _this.handleClick.bind(_this);
+      _this.spyHandler = _this.spyHandler.bind(_this);
+
+      return _this;
+    }
+
+    _createClass(_, [{
+      key: &#x27;scrollTo&#x27;,
+      value: function scrollTo(to, props) {
+        scroller.scrollTo(to, props);
+      }
+    }, {
+      key: &#x27;handleClick&#x27;,
+      value: function handleClick(event) {
+
+<span class="apidocCodeCommentSpan">        /*
+         * give the posibility to override onClick
+         */
+</span>
+        if (this.props.onClick) {
+          this.props.onClick(event);
+        }
+
+        /*
+         * dont bubble the navigation
+         */
+
+        if (event.stopPropagation) event.stopPropagation();
+        if (event.preventDefault) event.preventDefault();
+
+        /*
+         * do the magic!
+         */
+        this.scrollTo(this.props.to, this.props);
+      }
+    }, {
+      key: &#x27;spyHandler&#x27;,
+      value: function spyHandler(y) {
+        var element = scroller.get(this.props.to);
+        if (!element) return;
+        var cords = element.getBoundingClientRect();
+        var topBound = cords.top + y;
+        var bottomBound = topBound + cords.height;
+        var offsetY = y - this.props.offset;
+        var to = this.props.to;
+        var isInside = offsetY &#x3e;= topBound &#x26;&#x26; offsetY &#x3c;= bottomBound;
+        var isOutside = offsetY &#x3c; topBound || offsetY &#x3e; bottomBound;
+        var activeLink = scroller.getActiveLink();
+
+        if (isOutside &#x26;&#x26; activeLink === to) {
+          scroller.setActiveLink(void 0);
+          this.setState({ active: false });
+
+          if (this.props.onSetInactive) {
+            this.props.onSetInactive();
+          }
+        } else if (isInside &#x26;&#x26; activeLink != to) {
+          scroller.setActiveLink(to);
+          this.setState({ active: true });
+
+          if (this.props.onSetActive) {
+            this.props.onSetActive(to);
+          }
+
+          scrollSpy.updateStates();
+        }
+      }
+    }, {
+      key: &#x27;componentDidMount&#x27;,
+      value: function componentDidMount() {
+
+        var containerId = this.props.containerId;
+
+        var scrollSpyContainer = containerId ? document.getElementById(containerId) : document;
+
+        if (!scrollSpy.isMounted(scrollSpyContainer)) {
+          scrollSpy.mount(scrollSpyContainer);
+        }
+
+        if (this.props.spy) {
+          var to = this.props.to;
+          var element = null;
+          var elemTopBound = 0;
+          var elemBottomBound = 0;
+
+          this._stateHandler = function () {
+            if (scroller.getActiveLink() != to) {
+              if (this.state !== null &#x26;&#x26; this.state.active &#x26;&#x26; this.props.onSetInactive) {
+                this.props.onSetInactive();
+              }
+              this.setState({ active: false });
+            }
+          }.bind(this);
+
+          scrollSpy.addStateHandler(this._stateHandler);
+
+          this._spyHandler = function (y) {
+
+            var containerTop = 0;
+            if (scrollSpyContainer.getBoundingClientRect) {
+              var containerCords = scrollSpyContainer.getBoundingClientRect();
+              containerTop = containerCords.top;
+            }
+
+            if (!element || this.props.isDynamic) {
+              element = scroller.get(to);
+              if (!element) {
+                return;
+              }
+
+              var cords = element.getBoundingClientRect();
+              elemTopBound = cords.top - containerTop + y;
+              elemBottomBound = elemTopBound + cords.height;
+            }
+
+            var offsetY = y - this.props.offset;
+            var isInside = offsetY &#x3e;= Math.floor(elemTopBound) &#x26;&#x26; offsetY &#x3c;= Math.floor(elemBottomBound);
+            var isOutside = offsetY &#x3c; Math.floor(elemTopBound) || offsetY &#x3e; Math.floor(elemBottomBound);
+            var active ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      &#x3c;a {...this.props}&#x3e;
+        {this.props.children}
+      &#x3c;/a&#x3e;
+    );
+  }
+});
+
+module.exports = Helpers.<span class="apidocCodeKeywordSpan">Scroll</span>(Link);
+
+```
+
+
+### Scroll Animations
+&#x3e; Add a custom easing animation to the smooth option. This prop will accept a Boolean if you want the default, or any of the
+ animations listed below
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-scroll.animateScroll" id="apidoc.module.react-scroll.animateScroll">module react-scroll.animateScroll</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.animateScroll.animateTopScroll" id="apidoc.element.react-scroll.animateScroll.animateTopScroll">
+        function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>animateTopScroll
+        <span class="apidocSignatureSpan">(y, options, to, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startAnimateTopScroll(y, options, to, target) {
+
+  window.clearTimeout(__delayTimeout);
+
+  if (!options.ignoreCancelEvents) {
+<span class="apidocCodeCommentSpan">    /*
+     * Sets the cancel trigger
+     */
+</span>
+    cancelEvents.register(function () {
+      __cancel = true;
+    });
+  }
+
+  setContainer(options);
+
+  __start = null;
+  __cancel = false;
+  __startPositionY = currentPositionY();
+  __targetPositionY = options.absolute ? y : y + __startPositionY;
+  __deltaTop = Math.round(__targetPositionY - __startPositionY);
+
+  __duration = functionWrapper(options.duration)(__deltaTop);
+  __duration = isNaN(parseFloat(__duration)) ? 1000 : parseFloat(__duration);
+  __to = to;
+  __target = target;
+
+  var easing = getAnimationType(options);
+  var easedAnimate = animateTopScroll.bind(null, easing);
+
+  if (options &#x26;&#x26; options.delay &#x3e; 0) {
+    __delayTimeout = window.setTimeout(function animate() {
+      requestAnimationFrameHelper.call(window, easedAnimate);
+    }, options.delay);
+    return;
+  }
+
+  requestAnimationFrameHelper.call(window, easedAnimate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.animateScroll.getAnimationType" id="apidoc.element.react-scroll.animateScroll.getAnimationType">
+        function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>getAnimationType
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getAnimationType(options) {
+  if (_typeof(options.smooth) === Boolean &#x26;&#x26; options.smooth === true) {
+    return smooth.defaultEasing;
+  } else {
+    var animationType = options.smooth;
+    switch (animationType) {
+      case &#x22;linear&#x22;:
+        return smooth.linear;
+      case &#x22;easeInQuad&#x22;:
+        return smooth.easeInQuad;
+      case &#x22;easeOutQuad&#x22;:
+        return smooth.easeOutQuad;
+      case &#x22;easeInOutQuad&#x22;:
+        return smooth.easeInOutQuad;
+      case &#x22;easeInCubic&#x22;:
+        return smooth.easeInCubic;
+      case &#x22;easeOutCubic&#x22;:
+        return smooth.easeOutQuad;
+      case &#x22;easeInOutCubic&#x22;:
+        return smooth.easeInQuad;
+      case &#x22;easeInQuart&#x22;:
+        return smooth.easeInQuart;
+      case &#x22;easeOutQuart&#x22;:
+        return smooth.easeOutQuart;
+      case &#x22;easeInOutQuart&#x22;:
+        return smooth.easeInOutQuart;
+      case &#x22;easeInQuint&#x22;:
+        return smooth.easeInQuint;
+      case &#x22;easeOutQuint&#x22;:
+        return smooth.easeInQuint;
+      case &#x22;easeInOutQuint&#x22;:
+        return smooth.easeInOutQuint;
+      default:
+        return smooth.defaultEasing;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.animateScroll.scrollMore" id="apidoc.element.react-scroll.animateScroll.scrollMore">
+        function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>scrollMore
+        <span class="apidocSignatureSpan">(toY, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollMore(toY, options) {
+  setContainer(options);
+  startAnimateTopScroll(currentPositionY() + toY, assign(options || {}, { absolute: true }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+scrollToBottom: function() {
+  scroll.scrollToBottom();
+},
+scrollTo: function() {
+  scroll.scrollTo(100);
+},
+scrollMore: function() {
+  scroll.<span class="apidocCodeKeywordSpan">scrollMore</span>(100);
+},
+handleSetActive: function(to) {
+  console.log(to);
+},
+render: function () {
+	return (
+    &#x3c;div&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.animateScroll.scrollTo" id="apidoc.element.react-scroll.animateScroll.scrollTo">
+        function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>scrollTo
+        <span class="apidocSignatureSpan">(toY, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollTo(toY, options) {
+  startAnimateTopScroll(toY, assign(options || {}, { absolute: true }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+scrollToTop: function() {
+  scroll.scrollToTop();
+},
+scrollToBottom: function() {
+  scroll.scrollToBottom();
+},
+scrollTo: function() {
+  scroll.<span class="apidocCodeKeywordSpan">scrollTo</span>(100);
+},
+scrollMore: function() {
+  scroll.scrollMore(100);
+},
+handleSetActive: function(to) {
+  console.log(to);
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.animateScroll.scrollToBottom" id="apidoc.element.react-scroll.animateScroll.scrollToBottom">
+        function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>scrollToBottom
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollToBottom(options) {
+  setContainer(options);
+  startAnimateTopScroll(scrollContainerHeight(), assign(options || {}, { absolute: true }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  Events.scrollEvent.remove(&#x27;begin&#x27;);
+  Events.scrollEvent.remove(&#x27;end&#x27;);
+},
+scrollToTop: function() {
+  scroll.scrollToTop();
+},
+scrollToBottom: function() {
+  scroll.<span class="apidocCodeKeywordSpan">scrollToBottom</span>();
+},
+scrollTo: function() {
+  scroll.scrollTo(100);
+},
+scrollMore: function() {
+  scroll.scrollMore(100);
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.animateScroll.scrollToTop" id="apidoc.element.react-scroll.animateScroll.scrollToTop">
+        function <span class="apidocSignatureSpan">react-scroll.animateScroll.</span>scrollToTop
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollToTop(options) {
+  startAnimateTopScroll(0, assign(options || {}, { absolute: true }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+},
+componentWillUnmount: function() {
+  Events.scrollEvent.remove(&#x27;begin&#x27;);
+  Events.scrollEvent.remove(&#x27;end&#x27;);
+},
+scrollToTop: function() {
+  scroll.<span class="apidocCodeKeywordSpan">scrollToTop</span>();
+},
+scrollToBottom: function() {
+  scroll.scrollToBottom();
+},
+scrollTo: function() {
+  scroll.scrollTo(100);
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-scroll.scrollSpy" id="apidoc.module.react-scroll.scrollSpy">module react-scroll.scrollSpy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scrollSpy.addSpyHandler" id="apidoc.element.react-scroll.scrollSpy.addSpyHandler">
+        function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>addSpyHandler
+        <span class="apidocSignatureSpan">(handler, scrollSpyContainer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addSpyHandler(handler, scrollSpyContainer) {
+  var container = this.scrollSpyContainers[this.scrollSpyContainers.indexOf(scrollSpyContainer)];
+  if (!container.spyCallbacks) {
+    container.spyCallbacks = [];
+  }
+  container.spyCallbacks.push(handler);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scrollSpy.addStateHandler" id="apidoc.element.react-scroll.scrollSpy.addStateHandler">
+        function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>addStateHandler
+        <span class="apidocSignatureSpan">(handler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addStateHandler(handler) {
+  this.spySetState.push(handler);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scrollSpy.currentPositionY" id="apidoc.element.react-scroll.scrollSpy.currentPositionY">
+        function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>currentPositionY
+        <span class="apidocSignatureSpan">(scrollSpyContainer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function currentPositionY(scrollSpyContainer) {
+  if (scrollSpyContainer === document) {
+    var supportPageOffset = window.pageXOffset !== undefined;
+    var isCSS1Compat = (document.compatMode || &#x22;&#x22;) === &#x22;CSS1Compat&#x22;;
+    return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+  } else {
+    return scrollSpyContainer.scrollTop;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scrollSpy.isMounted" id="apidoc.element.react-scroll.scrollSpy.isMounted">
+        function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>isMounted
+        <span class="apidocSignatureSpan">(scrollSpyContainer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isMounted(scrollSpyContainer) {
+  return this.scrollSpyContainers.indexOf(scrollSpyContainer) !== -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scrollSpy.mount" id="apidoc.element.react-scroll.scrollSpy.mount">
+        function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>mount
+        <span class="apidocSignatureSpan">(scrollSpyContainer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mount(scrollSpyContainer) {
+  var t = this;
+  if (scrollSpyContainer) {
+    var eventHandler = eventThrottler(function (event) {
+      t.scrollHandler(scrollSpyContainer);
+    });
+    this.scrollSpyContainers.push(scrollSpyContainer);
+    addPassiveEventListener(scrollSpyContainer, &#x27;scroll&#x27;, eventHandler);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scrollSpy.scrollHandler" id="apidoc.element.react-scroll.scrollSpy.scrollHandler">
+        function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>scrollHandler
+        <span class="apidocSignatureSpan">(scrollSpyContainer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollHandler(scrollSpyContainer) {
+  var callbacks = this.scrollSpyContainers[this.scrollSpyContainers.indexOf(scrollSpyContainer)].spyCallbacks;
+  if (callbacks) {
+    for (var i = 0; i &#x3c; callbacks.length; i++) {
+      var position = this.currentPositionY(scrollSpyContainer);
+      callbacks[i](this.currentPositionY(scrollSpyContainer));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scrollSpy.unmount" id="apidoc.element.react-scroll.scrollSpy.unmount">
+        function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>unmount
+        <span class="apidocSignatureSpan">(stateHandler, spyHandler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unmount(stateHandler, spyHandler) {
+  for (var i = 0; i &#x3c; this.scrollSpyContainers.length; i++) {
+    var callbacks = this.scrollSpyContainers[i].spyCallbacks;
+    if (callbacks &#x26;&#x26; callbacks.length) {
+      callbacks.splice(callbacks.indexOf(spyHandler), 1);
+    }
+  }
+
+  if (this.spySetState &#x26;&#x26; this.spySetState.length) {
+    this.spySetState.splice(this.spySetState.indexOf(stateHandler), 1);
+  }
+
+  document.removeEventListener(&#x27;scroll&#x27;, this.scrollHandler);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scrollSpy.update" id="apidoc.element.react-scroll.scrollSpy.update">
+        function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function update() {
+  for (var i = 0; i &#x3c; this.scrollSpyContainers.length; i++) {
+    this.scrollHandler(this.scrollSpyContainers[i]);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    console.log(&#x22;begin&#x22;, arguments);
+  });
+
+  Events.scrollEvent.register(&#x27;end&#x27;, function(to, element) {
+    console.log(&#x22;end&#x22;, arguments);
+  });
+
+  scrollSpy.<span class="apidocCodeKeywordSpan">update</span>();
+
+},
+componentWillUnmount: function() {
+  Events.scrollEvent.remove(&#x27;begin&#x27;);
+  Events.scrollEvent.remove(&#x27;end&#x27;);
+},
+scrollToTop: function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scrollSpy.updateStates" id="apidoc.element.react-scroll.scrollSpy.updateStates">
+        function <span class="apidocSignatureSpan">react-scroll.scrollSpy.</span>updateStates
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updateStates() {
+  var length = this.spySetState.length;
+
+  for (var i = 0; i &#x3c; length; i++) {
+    this.spySetState[i]();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-scroll.scroller" id="apidoc.module.react-scroll.scroller">module react-scroll.scroller</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scroller.get" id="apidoc.element.react-scroll.scroller.get">
+        function <span class="apidocSignatureSpan">react-scroll.scroller.</span>get
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get(name) {
+  return __mapped[name] || document.getElementById(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scroller.getActiveLink" id="apidoc.element.react-scroll.scroller.getActiveLink">
+        function <span class="apidocSignatureSpan">react-scroll.scroller.</span>getActiveLink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getActiveLink() {
+  return __activeLink;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scroller.register" id="apidoc.element.react-scroll.scroller.register">
+        function <span class="apidocSignatureSpan">react-scroll.scroller.</span>register
+        <span class="apidocSignatureSpan">(name, element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function register(name, element) {
+  __mapped[name] = element;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var scroll     = Scroll.animateScroll;
+var scrollSpy  = Scroll.scrollSpy;
+
+
+var Section = React.createClass({
+  componentDidMount: function() {
+
+Events.scrollEvent.<span class="apidocCodeKeywordSpan">register</span>(&#x27;begin&#x27;, function(to, element) {
+  console.log(&#x22;begin&#x22;, arguments);
+});
+
+Events.scrollEvent.register(&#x27;end&#x27;, function(to, element) {
+  console.log(&#x22;end&#x22;, arguments);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scroller.scrollTo" id="apidoc.element.react-scroll.scroller.scrollTo">
+        function <span class="apidocSignatureSpan">react-scroll.scroller.</span>scrollTo
+        <span class="apidocSignatureSpan">(to, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollTo(to, props) {
+
+<span class="apidocCodeCommentSpan">  /*
+  * get the mapped DOM element
+  */
+</span>
+  var target = this.get(to);
+
+  if (!target) {
+    console.warn(&#x22;target Element not found&#x22;);
+    return;
+  }
+
+  props = assign({}, props, { absolute: false });
+
+  if (events.registered[&#x27;begin&#x27;]) {
+    events.registered[&#x27;begin&#x27;](to, target);
+  }
+
+  var containerId = props.containerId;
+  var containerElement = containerId ? document.getElementById(containerId) : null;
+
+  var scrollOffset;
+
+  if (containerId &#x26;&#x26; containerElement) {
+    props.absolute = true;
+    if (containerElement !== target.offsetParent) {
+      if (!containerElement.contains(target)) {
+        throw new Error(&#x27;Container with ID &#x27; + containerId + &#x27; is not a parent of target &#x27; + to);
+      } else {
+        throw new Error(&#x27;Container with ID &#x27; + containerId + &#x27; is not a positioned element&#x27;);
+      }
+    }
+
+    scrollOffset = target.offsetTop;
+  } else {
+    var coordinates = target.getBoundingClientRect();
+    scrollOffset = coordinates.top;
+  }
+
+  scrollOffset += props.offset || 0;
+
+  /*
+   * if animate is not provided just scroll into the view
+   */
+  if (!props.smooth) {
+    if (containerId &#x26;&#x26; containerElement) {
+      containerElement.scrollTop = scrollOffset;
+    } else {
+      // window.scrollTo accepts only absolute values so body rectangle needs to be subtracted
+      var bodyRect = document.body.getBoundingClientRect();
+      window.scrollTo(0, scrollOffset - bodyRect.top);
+    }
+
+    if (events.registered[&#x27;end&#x27;]) {
+      events.registered[&#x27;end&#x27;](to, target);
+    }
+
+    return;
+  }
+
+  /*
+   * Animate scrolling
+   */
+
+  animateScroll.animateTopScroll(scrollOffset, props, to, target);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+scrollToTop: function() {
+  scroll.scrollToTop();
+},
+scrollToBottom: function() {
+  scroll.scrollToBottom();
+},
+scrollTo: function() {
+  scroll.<span class="apidocCodeKeywordSpan">scrollTo</span>(100);
+},
+scrollMore: function() {
+  scroll.scrollMore(100);
+},
+handleSetActive: function(to) {
+  console.log(to);
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scroller.setActiveLink" id="apidoc.element.react-scroll.scroller.setActiveLink">
+        function <span class="apidocSignatureSpan">react-scroll.scroller.</span>setActiveLink
+        <span class="apidocSignatureSpan">(link)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setActiveLink(link) {
+  __activeLink = link;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scroller.unmount" id="apidoc.element.react-scroll.scroller.unmount">
+        function <span class="apidocSignatureSpan">react-scroll.scroller.</span>unmount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unmount() {
+  __mapped = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scroll.scroller.unregister" id="apidoc.element.react-scroll.scroller.unregister">
+        function <span class="apidocSignatureSpan">react-scroll.scroller.</span>unregister
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unregister(name) {
+  delete __mapped[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
