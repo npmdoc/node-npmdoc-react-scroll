@@ -765,7 +765,18 @@ module.exports = Helpers.<span class="apidocCodeKeywordSpan">Scroll</span>(Link)
 
   requestAnimationFrameHelper.call(window, easedAnimate);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return;
+    }
+
+    /*
+     * Animate scrolling
+     */
+
+    animateScroll.<span class="apidocCodeKeywordSpan">animateTopScroll</span>(scrollOffset, props, to, target);
+  }
+};
+...</pre></li>
     </ul>
 
 
@@ -814,7 +825,23 @@ module.exports = Helpers.<span class="apidocCodeKeywordSpan">Scroll</span>(Link)
     }
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var _smooth2 = _interopRequireDefault(_smooth);
+
+function _interopRequireDefault(obj) { return obj &#x26;&#x26; obj.__esModule ? obj : { default: obj }; }
+
+describe(&#x27;AnimationTypeUnitTests&#x27;, function () {
+
+it(&#x27;chooses correct easing function with no smooth options&#x27;, function () {
+  var animation = _animateScroll2.default.<span class="apidocCodeKeywordSpan">getAnimationType</span>({});
+  (0, _expect2.default)(animation).toEqual(_smooth2.default.defaultEasing);
+});
+
+it(&#x27;chooses correct easing function for smooth: true&#x27;, function () {
+  var animation = _animateScroll2.default.getAnimationType({ smooth: true });
+  (0, _expect2.default)(animation).toEqual(_smooth2.default.defaultEasing);
+});
+...</pre></li>
     </ul>
 
 
@@ -964,7 +991,23 @@ scrollTo: function() {
   }
   container.spyCallbacks.push(handler);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            this.props.onSetActive(to);
+          }
+
+          scrollSpy.updateStates();
+        }
+      }.bind(this);
+
+      scrollSpy.<span class="apidocCodeKeywordSpan">addSpyHandler</span>(this._spyHandler, scrollSpyContainer);
+    }
+  }
+}, {
+  key: &#x27;componentWillUnmount&#x27;,
+  value: function componentWillUnmount() {
+    scrollSpy.unmount(this._stateHandler, this._spyHandler);
+  }
+...</pre></li>
     </ul>
 
 
@@ -979,7 +1022,23 @@ scrollTo: function() {
     <li>description and source-code<pre class="apidocCodePre">function addStateHandler(handler) {
   this.spySetState.push(handler);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (this.state !== null &#x26;&#x26; this.state.active &#x26;&#x26; this.props.onSetInactive) {
+    this.props.onSetInactive();
+  }
+  this.setState({ active: false });
+}
+            }.bind(this);
+
+            scrollSpy.<span class="apidocCodeKeywordSpan">addStateHandler</span>(this._stateHandler);
+
+            this._spyHandler = function (y) {
+
+var containerTop = 0;
+if (scrollSpyContainer.getBoundingClientRect) {
+  var containerCords = scrollSpyContainer.getBoundingClientRect();
+  containerTop = containerCords.top;
+...</pre></li>
     </ul>
 
 
@@ -1000,7 +1059,23 @@ scrollTo: function() {
     return scrollSpyContainer.scrollTop;
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+},
+
+scrollHandler: function scrollHandler(scrollSpyContainer) {
+  var callbacks = this.scrollSpyContainers[this.scrollSpyContainers.indexOf(scrollSpyContainer)].spyCallbacks;
+  if (callbacks) {
+    for (var i = 0; i &#x3c; callbacks.length; i++) {
+      var position = this.<span class="apidocCodeKeywordSpan">currentPositionY</span>(scrollSpyContainer);
+      callbacks[i](this.currentPositionY(scrollSpyContainer));
+    }
+  }
+},
+
+addStateHandler: function addStateHandler(handler) {
+  this.spySetState.push(handler);
+...</pre></li>
     </ul>
 
 
@@ -1015,7 +1090,23 @@ scrollTo: function() {
     <li>description and source-code<pre class="apidocCodePre">function isMounted(scrollSpyContainer) {
   return this.scrollSpyContainers.indexOf(scrollSpyContainer) !== -1;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        key: &#x27;componentDidMount&#x27;,
+        value: function componentDidMount() {
+
+var containerId = this.props.containerId;
+
+var scrollSpyContainer = containerId ? document.getElementById(containerId) : document;
+
+if (!scrollSpy.<span class="apidocCodeKeywordSpan">isMounted</span>(scrollSpyContainer)) {
+  scrollSpy.mount(scrollSpyContainer);
+}
+
+if (this.props.spy) {
+  var to = this.props.to;
+  var element = null;
+  var elemTopBound = 0;
+...</pre></li>
     </ul>
 
 
@@ -1037,7 +1128,23 @@ scrollTo: function() {
     addPassiveEventListener(scrollSpyContainer, &#x27;scroll&#x27;, eventHandler);
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        value: function componentDidMount() {
+
+var containerId = this.props.containerId;
+
+var scrollSpyContainer = containerId ? document.getElementById(containerId) : document;
+
+if (!scrollSpy.isMounted(scrollSpyContainer)) {
+  scrollSpy.<span class="apidocCodeKeywordSpan">mount</span>(scrollSpyContainer);
+}
+
+if (this.props.spy) {
+  var to = this.props.to;
+  var element = null;
+  var elemTopBound = 0;
+  var elemBottomBound = 0;
+...</pre></li>
     </ul>
 
 
@@ -1058,7 +1165,23 @@ scrollTo: function() {
     }
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+spySetState: [],
+scrollSpyContainers: [],
+
+mount: function mount(scrollSpyContainer) {
+  var t = this;
+  if (scrollSpyContainer) {
+    var eventHandler = eventThrottler(function (event) {
+      t.<span class="apidocCodeKeywordSpan">scrollHandler</span>(scrollSpyContainer);
+    });
+    this.scrollSpyContainers.push(scrollSpyContainer);
+    addPassiveEventListener(scrollSpyContainer, &#x27;scroll&#x27;, eventHandler);
+  }
+},
+
+isMounted: function isMounted(scrollSpyContainer) {
+...</pre></li>
     </ul>
 
 
@@ -1084,7 +1207,23 @@ scrollTo: function() {
 
   document.removeEventListener(&#x27;scroll&#x27;, this.scrollHandler);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  scrollSpy.addSpyHandler(this._spyHandler, scrollSpyContainer);
+}
+        }
+      }, {
+        key: &#x27;componentWillUnmount&#x27;,
+        value: function componentWillUnmount() {
+scrollSpy.<span class="apidocCodeKeywordSpan">unmount</span>(this._stateHandler, this._spyHandler);
+        }
+      }, {
+        key: &#x27;render&#x27;,
+        value: function render() {
+
+var className = &#x22;&#x22;;
+if (this.state &#x26;&#x26; this.state.active) {
+...</pre></li>
     </ul>
 
 
@@ -1136,7 +1275,23 @@ scrollToTop: function() {
     this.spySetState[i]();
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  scroller.setActiveLink(to);
+  this.setState({ active: true });
+
+  if (this.props.onSetActive) {
+    this.props.onSetActive(to);
+  }
+
+  scrollSpy.<span class="apidocCodeKeywordSpan">updateStates</span>();
+}
+        }
+      }, {
+        key: &#x27;componentDidMount&#x27;,
+        value: function componentDidMount() {
+
+var containerId = this.props.containerId;
+...</pre></li>
     </ul>
 
 
@@ -1162,7 +1317,23 @@ scrollToTop: function() {
     <li>description and source-code<pre class="apidocCodePre">function get(name) {
   return __mapped[name] || document.getElementById(name);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     * do the magic!
+     */
+    this.scrollTo(this.props.to, this.props);
+  }
+}, {
+  key: &#x27;spyHandler&#x27;,
+  value: function spyHandler(y) {
+    var element = scroller.<span class="apidocCodeKeywordSpan">get</span>(this.props.to);
+    if (!element) return;
+    var cords = element.getBoundingClientRect();
+    var topBound = cords.top + y;
+    var bottomBound = topBound + cords.height;
+    var offsetY = y - this.props.offset;
+    var to = this.props.to;
+    var isInside = offsetY &#x3e;= topBound &#x26;&#x26; offsetY &#x3c;= bottomBound;
+...</pre></li>
     </ul>
 
 
@@ -1177,7 +1348,23 @@ scrollToTop: function() {
     <li>description and source-code<pre class="apidocCodePre">function getActiveLink() {
   return __activeLink;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+          var cords = element.getBoundingClientRect();
+          var topBound = cords.top + y;
+          var bottomBound = topBound + cords.height;
+          var offsetY = y - this.props.offset;
+          var to = this.props.to;
+          var isInside = offsetY &#x3e;= topBound &#x26;&#x26; offsetY &#x3c;= bottomBound;
+          var isOutside = offsetY &#x3c; topBound || offsetY &#x3e; bottomBound;
+          var activeLink = scroller.<span class="apidocCodeKeywordSpan">getActiveLink</span>();
+
+          if (isOutside &#x26;&#x26; activeLink === to) {
+scroller.setActiveLink(void 0);
+this.setState({ active: false });
+
+if (this.props.onSetInactive) {
+  this.props.onSetInactive();
+...</pre></li>
     </ul>
 
 
@@ -1317,7 +1504,23 @@ handleSetActive: function(to) {
     <li>description and source-code<pre class="apidocCodePre">function setActiveLink(link) {
   __activeLink = link;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var offsetY = y - this.props.offset;
+var to = this.props.to;
+var isInside = offsetY &#x3e;= topBound &#x26;&#x26; offsetY &#x3c;= bottomBound;
+var isOutside = offsetY &#x3c; topBound || offsetY &#x3e; bottomBound;
+var activeLink = scroller.getActiveLink();
+
+if (isOutside &#x26;&#x26; activeLink === to) {
+  scroller.<span class="apidocCodeKeywordSpan">setActiveLink</span>(void 0);
+  this.setState({ active: false });
+
+  if (this.props.onSetInactive) {
+    this.props.onSetInactive();
+  }
+} else if (isInside &#x26;&#x26; activeLink != to) {
+  scroller.setActiveLink(to);
+...</pre></li>
     </ul>
 
 
@@ -1332,7 +1535,23 @@ handleSetActive: function(to) {
     <li>description and source-code<pre class="apidocCodePre">function unmount() {
   __mapped = {};
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  scrollSpy.addSpyHandler(this._spyHandler, scrollSpyContainer);
+}
+        }
+      }, {
+        key: &#x27;componentWillUnmount&#x27;,
+        value: function componentWillUnmount() {
+scrollSpy.<span class="apidocCodeKeywordSpan">unmount</span>(this._stateHandler, this._spyHandler);
+        }
+      }, {
+        key: &#x27;render&#x27;,
+        value: function render() {
+
+var className = &#x22;&#x22;;
+if (this.state &#x26;&#x26; this.state.active) {
+...</pre></li>
     </ul>
 
 
@@ -1347,7 +1566,23 @@ handleSetActive: function(to) {
     <li>description and source-code<pre class="apidocCodePre">function unregister(name) {
   delete __mapped[name];
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (this.props.name !== nextProps.name) {
+      this.registerElems(nextProps.name);
+    }
+  }
+}, {
+  key: &#x27;componentWillUnmount&#x27;,
+  value: function componentWillUnmount() {
+    defaultScroller.<span class="apidocCodeKeywordSpan">unregister</span>(this.props.name);
+  }
+}, {
+  key: &#x27;registerElems&#x27;,
+  value: function registerElems(name) {
+    var domNode = ReactDOM.findDOMNode(this);
+    defaultScroller.register(name, domNode);
+  }
+...</pre></li>
     </ul>
 
 
