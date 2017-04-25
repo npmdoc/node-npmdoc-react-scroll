@@ -1,6 +1,6 @@
 # npmdoc-react-scroll
 
-#### api documentation for  [react-scroll (v1.5.2)](https://github.com/fisshy/react-scroll)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-scroll.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-scroll) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-scroll.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-scroll)
+#### basic api documentation for  [react-scroll (v1.5.2)](https://github.com/fisshy/react-scroll)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-scroll.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-scroll) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-scroll.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-scroll)
 
 #### A scroll component for React.js
 
@@ -21,41 +21,23 @@
 ```json
 
 {
-    "name": "react-scroll",
-    "version": "1.5.2",
-    "description": "A scroll component for React.js",
-    "main": "modules",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/fisshy/react-scroll.git"
-    },
-    "scripts": {
-        "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples",
-        "build": "babel modules -d build/npm/modules --ignore '**/__tests__/**' && gulp",
-        "clean": "rm -rf build/npm/modules",
-        "test": "karma start"
-    },
-    "homepage": "https://github.com/fisshy/react-scroll",
-    "bugs": "https://github.com/fisshy/react-scroll/issues",
     "authors": [
         "Joachim Karlsson"
     ],
-    "license": "MIT",
-    "tags": [
-        "react",
-        "scroll"
-    ],
-    "keywords": [
-        "react",
-        "react-component",
-        "scroll",
-        "scroller",
-        "scrolls"
-    ],
+    "babel": {
+        "presets": [
+            "es2015",
+            "react"
+        ]
+    },
+    "bugs": {
+        "url": "https://github.com/fisshy/react-scroll/issues"
+    },
     "dependencies": {
         "object-assign": "^4.1.1",
         "prop-types": "^15.5.8"
     },
+    "description": "A scroll component for React.js",
     "devDependencies": {
         "babel-cli": "^6.24.1",
         "babel-core": "^6.24.1",
@@ -78,16 +60,48 @@
         "webpack": "^2.4.1",
         "webpack-dev-server": "^2.4.2"
     },
+    "directories": {},
+    "dist": {
+        "shasum": "f10f14840d3138a121d2c0f04933bbfee4193975",
+        "tarball": "https://registry.npmjs.org/react-scroll/-/react-scroll-1.5.2.tgz"
+    },
+    "homepage": "https://github.com/fisshy/react-scroll",
+    "keywords": [
+        "react",
+        "react-component",
+        "scroll",
+        "scroller",
+        "scrolls"
+    ],
+    "license": "MIT",
+    "main": "modules",
+    "maintainers": [
+        {
+            "name": "fisshy"
+        }
+    ],
+    "name": "react-scroll",
+    "optionalDependencies": {},
     "peerDependencies": {
         "react": "^15.5.4",
         "react-dom": "^15.5.4"
     },
-    "babel": {
-        "presets": [
-            "es2015",
-            "react"
-        ]
-    }
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fisshy/react-scroll.git"
+    },
+    "scripts": {
+        "build": "babel modules -d build/npm/modules --ignore '**/__tests__/**' && gulp",
+        "clean": "rm -rf build/npm/modules",
+        "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples",
+        "test": "karma start"
+    },
+    "tags": [
+        "react",
+        "scroll"
+    ],
+    "version": "1.5.2",
+    "bin": {}
 }
 ```
 
